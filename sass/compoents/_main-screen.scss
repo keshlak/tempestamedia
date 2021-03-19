@@ -1,0 +1,28 @@
+.main-screen {
+  padding: 18px;
+  background-color: green;
+  flex-grow: 2;
+}
+
+.manage-block {
+  padding-bottom: 38px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.manage-nav {
+  display: block;
+}
+
+.manage-search {
+  display: block;
+}
+.manage-filter {
+  display: block;
+  margin-top: 42px;
+}
+
+.table-block {
+  background-color: #fff;
+}

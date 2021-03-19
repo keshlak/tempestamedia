@@ -1,0 +1,52 @@
+.side-menu {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 15px;
+
+  color: #0c848a;
+
+  &-title {
+    font-size: 11px;
+    line-height: 1.2;
+  }
+}
+
+.menu {
+  font-size: 14px;
+  line-height: 1.15;
+  margin-left: 25px;
+
+  &-item {
+    margin-top: 22px;
+    & span::before {
+      margin-right: 6px;
+      display: inline-block;
+      width: 19px;
+      height: 19px;
+      content: "";
+      background-color: #0c848a;
+      vertical-align: middle;
+      border-radius: 50%;
+    }
+  }
+}
+
+.current-item {
+  font-weight: bold;
+
+  &::after {
+    display: inline-block;
+    vertical-align: middle;
+    width: 3px;
+    height: 18px;
+    content: "";
+    background-color: #0c848a;
+  }
+}
+
+.submenu {
+  margin-left: 10px;
+  &-item {
+    margin-top: 14px;
+  }
+}
