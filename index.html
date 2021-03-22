@@ -7,11 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TM Advocacy</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./sass/main.css">
+
+    <script src="/js/script.js"></script>
 </head>
 
 <body>
+
     <header class="header">
         <div class="container">
             <div class="logo">
@@ -22,7 +27,7 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="main">
         <div class="side-menu">
             <h2 class="side-menu-title">
                 MENU
@@ -72,40 +77,59 @@
         </div>
         <div class="main-screen">
             <div class="manage-block">
-                <div class="manage-nav">
-                    <input type="search" class="manage-search">
-                    <span class="manage-filter">Status</span>
+                <div class="manage-block-status">
+
+                    <label for="manage-status">Status</label>
+                    <select name="select" id="manage-status">
+                        <option value="All">All</option>
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
+                        <option value="Invited">Invited</option>
+
+                    </select>
+
                 </div>
-                <div class="manage-options">
+                <div class="manage-block-search">
+                    <input type="search" class="search" id="manage-search" placeholder="Search">
                     <button>+ Invite New</button>
-                    <button>CSV Import</button>
                 </div>
+
             </div>
+
             <div class="table-block">
-                <table>
+                <table class="table-block-table">
                     <tr class="table-header">
-                        <th class="table-header-item">
+                        <th class="table-data-item check">
+                            <input type="checkbox" name='check'>
+                        </th>
+                        <th class="table-header-item date">
                             Date
                         </th>
-                        <th class="table-header-item">
+                        <th class="table-header-item name">
                             Name
                         </th>
-                        <th class="table-header-item">
+                        <th class="table-header-item email">
                             Email
                         </th>
-                        <th class="table-header-item">
+                        <th class="table-header-item posts">
+                            Posts
+                        </th>
+                        <th class="table-header-item status">
                             Status
                         </th>
-                        <th class="table-header-item">
+                        <th class="table-header-item options">
                             Options
                         </th>
                     </tr>
                     <tr class="table-data">
-                        <td class="table-data-item">
+                        <td class="table-data-item check">
+                            <input type="checkbox" name='check'>
+                        </td>
+                        <td class="table-data-item date">
                             02/03/2021
                         </td>
-                        <td class="table-data-item">
-                            <img src="" alt="" class="employee-photo">
+                        <td class="table-data-item name">
+                            <img src="./sass/img/Phoebe.png" alt="" class="employee-photo">
                             <div class="employee-name">
                                 <span class="employee-name-text">
                                     Phoebe Buffay
@@ -116,22 +140,28 @@
                                 </span>
                             </div>
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item email">
                             smelly.cat@gmail.com
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item posts">
+                            11
+                        </td>
+                        <td class="table-data-item status active">
                             Active
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item options">
 
                         </td>
                     </tr>
                     <tr class="table-data">
-                        <td class="table-data-item">
+                        <td class="table-data-item check">
+                            <input type="checkbox" name='check'>
+                        </td>
+                        <td class="table-data-item date">
                             02/03/2021
                         </td>
-                        <td class="table-data-item">
-                            <img src="" alt="" class="employee-photo">
+                        <td class="table-data-item name">
+                            <img src="./sass/img/Rachel.png" alt="" class="employee-photo">
                             <div class="employee-name">
                                 <span class="employee-name-text">
                                     Rachel Karen Green
@@ -142,22 +172,28 @@
                                 </span>
                             </div>
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item email">
                             rakel@gmail.com
                         </td>
-                        <td class="table-data-item">
-                            Active
+                        <td class="table-data-item posts">
+                            5
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item status inactive">
+                            Inactive
+                        </td>
+                        <td class="table-data-item options">
 
                         </td>
                     </tr>
                     <tr class="table-data">
-                        <td class="table-data-item">
+                        <td class="table-data-item check">
+                            <input type="checkbox" name='check'>
+                        </td>
+                        <td class="table-data-item date">
                             02/03/2021
                         </td>
-                        <td class="table-data-item">
-                            <img src="" alt="" class="employee-photo">
+                        <td class="table-data-item name">
+                            <img src="./sass/img/Monica.png" alt="" class="employee-photo">
                             <div class="employee-name">
                                 <span class="employee-name-text">
                                     Monica E. Geller
@@ -168,22 +204,28 @@
                                 </span>
                             </div>
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item email">
                             Iknow@gmail.com
                         </td>
-                        <td class="table-data-item">
-                            Active
+                        <td class="table-data-item posts">
+                            7
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item status invited">
+                            Invited
+                        </td>
+                        <td class="table-data-item options">
 
                         </td>
                     </tr>
-                    <tr class="table-data">
-                        <td class="table-data-item">
+                    <tr class="table-data ">
+                        <td class="table-data-item check">
+                            <input type="checkbox" name='check'>
+                        </td>
+                        <td class="table-data-item date">
                             02/03/2021
                         </td>
-                        <td class="table-data-item">
-                            <img src="" alt="" class="employee-photo">
+                        <td class="table-data-item name">
+                            <img src="./sass/img/Joey.png" alt="" class="employee-photo">
                             <div class="employee-name">
                                 <span class="employee-name-text">
                                     Joseph Francis Tribbiani, Jr.
@@ -194,22 +236,28 @@
                                 </span>
                             </div>
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item email">
                             doesntsharefood@gmail.com
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item posts">
+                            24
+                        </td>
+                        <td class="table-data-item status active">
                             Active
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item options">
 
                         </td>
                     </tr>
                     <tr class="table-data">
-                        <td class="table-data-item">
+                        <td class="table-data-item check">
+                            <input type="checkbox" name='check'>
+                        </td>
+                        <td class="table-data-item date">
                             02/03/2021
                         </td>
-                        <td class="table-data-item">
-                            <img src="" alt="" class="employee-photo">
+                        <td class="table-data-item name">
+                            <img src="./sass/img/Chandler.png" alt="" class="employee-photo">
                             <div class="employee-name">
                                 <span class="employee-name-text">
                                     Chandler Muriel Bing
@@ -220,22 +268,28 @@
                                 </span>
                             </div>
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item email">
                             transponster@gmail.com
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item posts">
+                            15
+                        </td>
+                        <td class="table-data-item status active">
                             Active
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item options">
 
                         </td>
                     </tr>
                     <tr class="table-data">
-                        <td class="table-data-item">
+                        <td class="table-data-item check">
+                            <input type="checkbox" name='check'>
+                        </td>
+                        <td class="table-data-item date">
                             02/03/2021
                         </td>
-                        <td class="table-data-item">
-                            <img src="" alt="" class="employee-photo">
+                        <td class="table-data-item name">
+                            <img src="./sass/img/Ross.png" alt="" class="employee-photo">
                             <div class="employee-name">
                                 <span class="employee-name-text">
                                     Ross Eustace Geller
@@ -246,22 +300,28 @@
                                 </span>
                             </div>
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item email">
                             l.o.v.e.love@gmail.com
                         </td>
-                        <td class="table-data-item">
-                            Active
+                        <td class="table-data-item posts">
+                            15
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item status ivited">
+                            Invited
+                        </td>
+                        <td class="table-data-item options">
 
                         </td>
                     </tr>
                     <tr class="table-data">
-                        <td class="table-data-item">
+                        <td class="table-data-item check">
+                            <input type="checkbox" name='check'>
+                        </td>
+                        <td class="table-data-item date">
                             02/03/2021
                         </td>
-                        <td class="table-data-item">
-                            <img src="" alt="" class="employee-photo">
+                        <td class="table-data-item name">
+                            <img src="./sass/img/Phoebe.png" alt="" class="employee-photo">
                             <div class="employee-name">
                                 <span class="employee-name-text">
                                     Phoebe Buffay
@@ -272,22 +332,28 @@
                                 </span>
                             </div>
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item email">
                             smelly.cat@gmail.com
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item posts">
+                            3
+                        </td>
+                        <td class="table-data-item status active">
                             Active
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item options">
 
                         </td>
                     </tr>
                     <tr class="table-data">
-                        <td class="table-data-item">
+                        <td class="table-data-item check">
+                            <input type="checkbox" name='check'>
+                        </td>
+                        <td class="table-data-item date">
                             02/03/2021
                         </td>
-                        <td class="table-data-item">
-                            <img src="" alt="" class="employee-photo">
+                        <td class="table-data-item name">
+                            <img src="./sass/img/Rachel.png" alt="" class="employee-photo">
                             <div class="employee-name">
                                 <span class="employee-name-text">
                                     Rachel Karen Green
@@ -298,22 +364,28 @@
                                 </span>
                             </div>
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item email">
                             rakel@gmail.com
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item posts">
+                            2
+                        </td>
+                        <td class="table-data-item status active">
                             Active
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item options">
 
                         </td>
                     </tr>
                     <tr class="table-data">
-                        <td class="table-data-item">
+                        <td class="table-data-item check">
+                            <input type="checkbox" name='check'>
+                        </td>
+                        <td class="table-data-item date">
                             02/03/2021
                         </td>
-                        <td class="table-data-item">
-                            <img src="" alt="" class="employee-photo">
+                        <td class="table-data-item name">
+                            <img src="./sass/img/Monica.png" alt="" class="employee-photo">
                             <div class="employee-name">
                                 <span class="employee-name-text">
                                     Monica E. Geller
@@ -324,22 +396,28 @@
                                 </span>
                             </div>
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item email">
                             Iknow@gmail.com
                         </td>
-                        <td class="table-data-item">
-                            Active
+                        <td class="table-data-item posts">
+                            14
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item status inactive">
+                            Inactive
+                        </td>
+                        <td class="table-data-item options">
 
                         </td>
                     </tr>
                     <tr class="table-data">
-                        <td class="table-data-item">
+                        <td class="table-data-item check">
+                            <input type="checkbox" name='check'>
+                        </td>
+                        <td class="table-data-item date">
                             02/03/2021
                         </td>
-                        <td class="table-data-item">
-                            <img src="" alt="" class="employee-photo">
+                        <td class="table-data-item name">
+                            <img src="./sass/img/Joey.png" alt="" class="employee-photo">
                             <div class="employee-name">
                                 <span class="employee-name-text">
                                     Joseph Francis Tribbiani, Jr.
@@ -350,22 +428,28 @@
                                 </span>
                             </div>
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item email">
                             doesntsharefood@gmail.com
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item posts">
+                            16
+                        </td>
+                        <td class="table-data-item status active">
                             Active
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item options">
 
                         </td>
                     </tr>
-                    <tr class="table-data">
-                        <td class="table-data-item">
+                    <!-- <tr class="table-data">
+                        <td class="table-data-item check">
+                            <input type="checkbox" name='check'>
+                        </td>
+                        <td class="table-data-item date">
                             02/03/2021
                         </td>
-                        <td class="table-data-item">
-                            <img src="" alt="" class="employee-photo">
+                        <td class="table-data-item name">
+                            <img src="./sass/img/Chandler.png" alt="" class="employee-photo">
                             <div class="employee-name">
                                 <span class="employee-name-text">
                                     Chandler Muriel Bing
@@ -376,20 +460,26 @@
                                 </span>
                             </div>
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item email">
                             transponster@gmail.com
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item posts">
+                            16
+                        </td>
+                        <td class="table-data-item status">
                             Active
                         </td>
-                        <td class="table-data-item">
+                        <td class="table-data-item options"> -->
 
-                        </td>
+                    </td>
                     </tr>
                 </table>
             </div>
         </div>
     </main>
+
+
+
 
 </body>
 
