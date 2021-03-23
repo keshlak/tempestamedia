@@ -26,9 +26,23 @@
   border: 0.5px solid #e5e5e5;
   border-radius: 2px;
   margin-left: 18px;
+  // appearance: none;
+  width: 110px;
+}
+
+.manage-block-search .svg {
+  position: absolute;
+  right: 0;
+  transform: translate(-40%, 40%);
+}
+
+.search-container {
+  position: relative;
+  display: inline-block;
 }
 
 .manage-block-search .search {
+  // position: relative;
   padding: 5px 7px;
 
   border: 1px solid #0c848a;
@@ -58,7 +72,7 @@
 
 .table-block {
   padding-top: 13px;
-  padding-right: 110px;
+  // padding-right: 110px;
   padding-bottom: 8px;
   padding-left: 11px;
 
@@ -68,8 +82,22 @@
   box-shadow: 0px 1px 2px -1px #7c7c7c;
 }
 
+.table-header-item {
+  padding-top: 13px;
+  padding-bottom: 8px;
+  text-align: left;
+
+  &.check {
+    padding-left: 11px;
+    // padding-right: 11px;
+  }
+
+  & svg {
+  }
+}
 .table-data-item {
-  font-size: 13px;
+  // text-align: center;
+  // font-size: 13px;
   color: #30312c;
   padding-top: 17px;
   padding-bottom: 17px;
@@ -82,17 +110,17 @@
 
   &.check {
     padding-left: 11px;
-    padding-right: 11px;
+    // padding-right: 11px;
   }
 
   &.date {
-    padding-left: 10px;
-    padding-right: 40px;
+    // padding-left: 10px;
+    // padding-right: 40px;
   }
   &.name {
     display: flex;
-    padding-left: 30px;
-    padding-right: 20px;
+    // padding-left: 30px;
+    // padding-right: 20px;
 
     & .employee-name {
       margin-left: 15px;
@@ -100,20 +128,21 @@
   }
 
   &.email {
-    padding-left: 15px;
-    padding-right: 30px;
+    // padding-left: 15px;
+    // padding-right: 30px;
   }
 
   &.posts {
-    padding-left: 30px;
-    padding-right: 16px;
+    // padding-left: 30px;
+    // padding-right: 16px;
   }
 
   &.status {
-    padding-left: 23px;
-    padding-right: 40px;
+    // padding-left: 20px;
+    // padding-right: 40px;
 
     &::before {
+      margin-right: 8px;
       display: inline-block;
       content: "";
       width: 6px;
@@ -132,8 +161,8 @@
   }
 
   &.options {
-    padding-left: 50px;
-    padding-right: 110px;
+    // padding-left: 50px;
+    // padding-right: 50px;
   }
 }
 
@@ -141,9 +170,42 @@
 //   background-color: #f0f0f0;
 // }
 .table-block-table {
-  // width: 1100px;
+  width: 100%;
   border-collapse: collapse;
 }
 tr:nth-of-type(2n) {
   background-color: #f0f0f0;
+}
+
+a.svg:not(:first-child) {
+  margin-left: 25px;
+
+  // background-image: url(../img/exchange.png);
+}
+
+.employee-photo {
+  width: 25px;
+  height: 25px;
+}
+
+.table-nav-item {
+  padding: 14px 50px;
+}
+
+.table-nav-button {
+  color: #000;
+  text-decoration: none;
+  padding: 2px 4px;
+  background-color: #fff;
+  border: 0.5px solid #e5e5e5;
+  border-radius: 1px;
+
+  &:not(:last-child) {
+    margin-left: 6px;
+  }
+
+  &.current {
+    color: #fff;
+    background-color: #0c848a;
+  }
 }
